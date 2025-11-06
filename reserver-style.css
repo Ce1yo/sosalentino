@@ -1,0 +1,429 @@
+/* Styles premium pour la page de réservation */
+
+.reservation-hero {
+    background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary) 50%, var(--secondary-dark) 100%);
+    color: var(--white);
+    padding: 140px 20px 80px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.reservation-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 50px,
+            rgba(255, 255, 255, 0.02) 50px,
+            rgba(255, 255, 255, 0.02) 51px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 50px,
+            rgba(255, 255, 255, 0.02) 50px,
+            rgba(255, 255, 255, 0.02) 51px
+        );
+    z-index: -1;
+}
+
+.reservation-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(165, 145, 76, 0.15), transparent);
+    z-index: -1;
+}
+
+.reservation-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.reservation-hero p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* Section réservation */
+.reservation-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, rgba(27, 37, 88, 0.02) 0%, rgba(165, 145, 76, 0.02) 100%);
+    min-height: 80vh;
+}
+
+.reservation-layout {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Formulaire de réservation - Design Premium */
+.reservation-form-wrapper {
+    background: var(--white);
+    padding: 4rem;
+    border-radius: 30px;
+    box-shadow: 
+        0 20px 60px rgba(27, 37, 88, 0.12),
+        0 0 0 1px rgba(165, 145, 76, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.reservation-form-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--primary);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.form-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.form-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.form-header p {
+    color: var(--gray);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* Grille du formulaire */
+.reservation-form .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.reservation-form .form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.reservation-form .form-group:not(.form-row .form-group) {
+    margin-bottom: 2rem;
+}
+
+/* Labels élégants */
+.reservation-form label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.reservation-form label::before {
+    content: '';
+    width: 3px;
+    height: 18px;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    border-radius: 3px;
+}
+
+/* Inputs stylisés */
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+    padding: 1rem 1.25rem;
+    border: 2px solid #e8e8e8;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+    background: #fafafa;
+}
+
+.reservation-form input:hover,
+.reservation-form select:hover,
+.reservation-form textarea:hover {
+    background: var(--white);
+    border-color: #d0d0d0;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 
+        0 0 0 4px rgba(165, 145, 76, 0.08),
+        0 5px 15px rgba(165, 145, 76, 0.1);
+    background: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Calendrier personnalisé */
+.reservation-form input[type="date"] {
+    position: relative;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23A5914C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 20px;
+}
+
+.reservation-form input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Select personnalisé */
+.reservation-form select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23A5914C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+/* Textarea */
+.reservation-form textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+/* Checkbox élégant */
+.checkbox-group {
+    margin: 2rem 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, rgba(165, 145, 76, 0.05), rgba(27, 37, 88, 0.05));
+    border-radius: 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.checkbox-label:hover {
+    border-color: var(--primary);
+    background: rgba(165, 145, 76, 0.08);
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: 0.15rem;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    accent-color: var(--primary);
+    border-radius: 6px;
+}
+
+.checkbox-label span {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+/* Bouton de soumission */
+.form-actions {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.form-actions .btn {
+    padding: 1.25rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(165, 145, 76, 0.25);
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-actions .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.form-actions .btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.form-actions .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(165, 145, 76, 0.35);
+}
+
+.form-actions .btn:active {
+    transform: translateY(-1px);
+}
+
+.form-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-top: 1.5rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* Section CTA */
+.cta-section {
+    background: linear-gradient(135deg, rgba(27, 37, 88, 0.05), rgba(165, 145, 76, 0.05));
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .reservation-hero {
+        padding: 120px 20px 50px;
+    }
+
+    .reservation-section {
+        padding: 3rem 0;
+    }
+
+    .reservation-form-wrapper {
+        padding: 2.5rem 2rem;
+        border-radius: 25px;
+    }
+
+    .form-header h2 {
+        font-size: 2rem;
+    }
+
+    .form-icon {
+        font-size: 3rem;
+    }
+
+    .reservation-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .reservation-form label::before {
+        height: 16px;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+        padding: 1.15rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .reservation-hero {
+        padding: 110px 15px 40px;
+    }
+
+    .reservation-hero h1 {
+        font-size: 2rem;
+    }
+
+    .reservation-hero p {
+        font-size: 1rem;
+    }
+
+    .reservation-form-wrapper {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .reservation-form input,
+    .reservation-form select,
+    .reservation-form textarea {
+        padding: 0.9rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Animation d'apparition */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reservation-form-wrapper {
+    animation: fadeInUp 0.8s ease-out;
+}

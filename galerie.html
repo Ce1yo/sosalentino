@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - So Salentino</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="galerie-style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="So Salentino" class="logo-img">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="carte.html" class="nav-link">Carte Complète</a></li>
+                <li><a href="galerie.html" class="nav-link active">Galerie</a></li>
+                <li><a href="reserver.html" class="nav-link">Réserver</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="galerie-hero">
+        <div class="container">
+            <h1>Galerie Photos</h1>
+            <p>Découvrez l'ambiance et nos créations culinaires</p>
+        </div>
+    </div>
+
+    <section class="galerie-section">
+        <div class="gallery-scroll-wrapper">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Les images seront dupliquées par JavaScript -->
+                <div class="gallery-item large">
+                    <img src="images/1.jpeg" alt="So Salentino">
+                    <div class="gallery-overlay">
+                        <h3>Pizza Margherita</h3>
+                        <p>Sauce tomate, mozzarella, basilic frais</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/00d82f41aa41e2386bb418b1a72d41a3b721da62.jpeg" alt="So Salentino">
+                    <div class="gallery-overlay">
+                        <h3>Puccia Salentine</h3>
+                        <p>Pain italien garni à la mode des Pouilles</p>
+                    </div>
+                </div>
+                <div class="gallery-item tall">
+                    <img src="images/1634df97ef746484dc929069499ca3a53698ba65.jpeg" alt="So Salentino">
+                    <div class="gallery-overlay">
+                        <h3>Pizza Bufala</h3>
+                        <p>Mozzarella di bufala, tomates cerises</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/2e4645964d48e2a42aacee4f1694a9ef83c3ce5c.jpeg" alt="So Salentino">
+                    <div class="gallery-overlay">
+                        <h3>Burrata Crémeuse</h3>
+                        <p>Burrata fraîche importée d'Italie</p>
+                    </div>
+                </div>
+                <div class="gallery-item wide">
+                    <img src="images/647c39e1da7acfda77332b782d01eb93e667182a.jpeg" alt="So Salentino">
+                    <div class="gallery-overlay">
+                        <h3>Ambiance Restaurant</h3>
+                        <p>Un cadre chaleureux et authentique</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/6be054c239f0282164b495b23762a2e3780c4980.jpeg" alt="So Salentino">
+                    <div class="gallery-overlay">
+                        <h3>Pizza Quattro Formaggi</h3>
+                        <p>Mélange de 4 fromages italiens</p>
+                    </div>
+                </div>
+                <div class="gallery-item tall">
+                    <img src="images/a75bf5ff5ea471cc61a7dffe3b7d3a9d7c8a86d1.jpeg" alt="So Salentino">
+                    <div class="gallery-overlay">
+                        <h3>Antipasti Maison</h3>
+                        <p>Sélection de spécialités italiennes</p>
+                    </div>
+                </div>
+                <div class="gallery-item large">
+                    <img src="images/ab597349d9c69d0892f398dfd95b749d1b15981f.jpeg" alt="So Salentino">
+                    <div class="gallery-overlay">
+                        <h3>Pizza Diavola</h3>
+                        <p>Sauce tomate, salami piquant, huile épicée</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ac034b5a08f68ad34851c7a16b7b834db4eb8426.jpeg" alt="So Salentino">
+                    <div class="gallery-overlay">
+                        <h3>Nos Ingrédients</h3>
+                        <p>Produits frais importés d'Italie</p>
+                    </div>
+                </div>
+                <div class="gallery-item wide">
+                    <img src="images/b47e6b228284699aaaadd56ecbf5700c13772e24.jpeg" alt="So Salentino">
+                    <div class="gallery-overlay">
+                        <h3>Pizza Prosciutto</h3>
+                        <p>Jambon de Parme, roquette, parmesan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <button class="lightbox-prev">❮</button>
+        <button class="lightbox-next">❯</button>
+    </div>
+
+    <!-- Floating Reservation Button -->
+    <div class="floating-reservation">
+        <a href="reserver.html" class="btn"></a>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>So Salentino</h3>
+                    <p>L'authenticité des Pouilles à Paris</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">TripAdvisor</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 So Salentino. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="galerie.js"></script>
+</body>
+</html>
